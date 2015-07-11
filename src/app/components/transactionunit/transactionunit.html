@@ -1,18 +1,18 @@
 <md-list-item class="md-3-line" ng-click="toggleDisplay($event)">
-    <img ng-src="creator_pic" class="md-avatar" alt="{{ creator }}" />
-    <div flex>
-        <div class="md-list-item-text">
-            <h3>{{ name }}</h3>
-            <h4>{{ date }}</h4>
-            <p>Créé par {{ creator }}{{ event_name ? " pour " + event_name : "" }}</p>
-        </div>
+  <img ng-src="creator-pic" class="md-avatar" alt="{{ creator }}" />
+  <div flex>
+    <div class="md-list-item-text">
+      <h3>{{ name }}</h3>
+      <h4>{{ date }}</h4>
+      <p>Créé par {{ creator }}{{ event_name ? " pour " + event_name : "" }}</p>
     </div>
-    <div ng-show="parent.showme" flex="15">
-        <div ng-repeat="(user, amount) in operations">
-            {{ user }}: {{ amount }}€<br />
-        </div>
+  </div>
+  <div ng-show="parent.showme" flex="15">
+    <div ng-repeat="(user, amount) in operations">
+      {{ user }}: {{ amount }}€<br />
     </div>
-    <div flex="10">
-        <md-button class="md-raised" ng-class="{ md-primary: amount >= 0, md-warn: amount < 0 }">{{ amount }}</md-button>
-    </div>
+  </div>
+  <div flex="10">
+    <md-button class="md-raised" ng-class="{ mdPrimary: amount >= 0, mdWarn: amount < 0 }">{{ amount }}</md-button>
+  </div>
 </md-list-item>

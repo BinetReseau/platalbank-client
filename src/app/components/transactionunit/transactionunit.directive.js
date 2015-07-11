@@ -14,7 +14,7 @@
       controllerAs: 'transactionunit',
       bindToController: true,
       scope: {
-        creator_pic: '=', // Picture of the legal person who created the transaction
+        creatorPic: '=', // Picture of the legal person who created the transaction
         creator: '=', // Name of the legal person who created the transaction
         name: '=', // Name of the transaction
         date: '=', // Date of the transaction
