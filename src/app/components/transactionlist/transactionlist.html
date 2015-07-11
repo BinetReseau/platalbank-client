@@ -1,61 +1,11 @@
 <md-content>
-    <section>
-        <md-subheader class="md-primary">Aujourd'hui</md-subheader>
-        <md-list layout-padding>
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-        </md-list>
-    </section>
-    <section>
-        <md-subheader class="md-primary">Hier</md-subheader>
-        <md-list layout-padding>
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-        </md-list>
-    </section>
-    <section>
-        <md-subheader class="md-primary">Avant</md-subheader>
-        <md-list layout-padding>
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-            <md-divider />
-            <transactionunit />
-        </md-list>
-    </section>
-</md-list>
+  <section ng-repeat="data in transactions">
+    <md-subheader class="md-primary">{{ data.name }}</md-subheader>
+    <md-list layout-padding>
+      <div ng-repeat="t in data.transactions">
+        <md-divider />
+        <transactionunit creator-pic="t.creator_pic" creator="t.creator" name="t.name" date="t.date" event_name="t.event_name" operations="t.operations" amount="t.amount" />
+      </div>
+    </md-list>
+  </section>
 </md-content>
