@@ -1,0 +1,12 @@
+<md-content>
+  <section ng-repeat="data in transactions">
+    <md-subheader class="md-primary">{{ data.name }}</md-subheader>
+    <md-list layout-padding>
+      <div ng-repeat="t in data.transactions">
+        <md-divider />
+        Creator: {{ t.creator }}
+        <transactionunit creator-pic="t.creatorPic" creator="t.creator" name="t.name" date="t.date" event_name="t.event_name" operations="t.operations" amount="t.amount" />
+      </div>
+    </md-list>
+  </section>
+</md-content>
