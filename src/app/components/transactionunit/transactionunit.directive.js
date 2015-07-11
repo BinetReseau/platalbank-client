@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function transactionunit() {
-    var directive = {
+    return {
       restrict: 'E',
       templateUrl: 'app/components/transactionunit/transactionunit.html',
       controller: 'TransactionunitController',
@@ -23,8 +23,6 @@
         amount: '=' // Balance change due to this transaction for current user, eg. if named A, -5
       }
     };
-
-    return directive;
   }
 
 })();
