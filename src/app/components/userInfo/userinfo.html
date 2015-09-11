@@ -1,19 +1,27 @@
- <div class="userInfo md-whiteframe-z2" >
- 			<div layout ="row" flex>
- 				<div ng-click="info.navigateTo('UserProfile',$event)">
-              <img class="profilePhoto" ng-src="{{info.user.photo}}" alt="{{info.user.shortname}}"/>
-              </div>
-              <div class="profileInfo" flex offset = "5">
-             {{info.user.name}} {{info.user.surname}}
-         </div>
-            <div flex offset = "10">
-            
-         			<md-button class="md-raised">
+<div class="userInfo md-whiteframe-z2" layout="row">
+      <div class="photoContainer" flex="10">
+            <img class="profilePhoto" ng-src="{{info.user.photo}}" alt="{{info.user.shortname}}"/>
+      </div>
 
+      <div class="profileInfo" ng-click="info.navigateTo('UserProfile',$event)" flex="40">
+            {{info.user.name}} {{info.user.surname}}
+          
+      </div>
+
+      <div class="buttonContainer" layout= "row" flex="40" >
+         <div>
+          <md-button class="md-raised" id="balance" ng-class="info.user.balance>= 0 ? 'md-primary' : 'md-warn'">
               {{info.user.balance}} €
-             </md-button>
+              
+           </md-button>
+        </div>
+        <div>
+          
+            <md-button md-no-ink class="md-primary"> <small>{{info.user.preview}}€</small> </md-button>
+        
+        </div>
+       
+      </div>
 
-         		</div>
-         	</div>
-          </div>
+</div>
 
