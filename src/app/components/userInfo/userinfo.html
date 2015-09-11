@@ -1,0 +1,15 @@
+ <div class="userInfo md-whiteframe-z2" >
+ 			<div layout ="row" flex>
+ 				<div>
+              <img class="profilePhoto" ng-src="{{info.user.photo}}"  alt="{{info.user.shortname}}"/>
+              </div>
+              <div class="profileInfo" flex offset = "5">
+             {{info.user.name}} {{info.user.surname}}
+         </div>
+            <div flex offset = "10">
+            
+         			<md-button class="md-raised">{{info.user.balance}} €</md-button>
+         		</div>
+         	</div>
+          </div>
+
