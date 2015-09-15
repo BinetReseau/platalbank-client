@@ -1,27 +1,25 @@
-<md-content>
-  <md-list>
+<md-list>
     <md-list-item class="md-1-line" ng-click="navbar.navigateTo('home',$event)">
-      <div><md-icon md-font-set="material-icons">home</md-icon></div>
-      <div flex offset="15">Accueil</div>
+        <div><md-icon md-font-set="material-icons">home</md-icon></div>
+        <div flex offset="15">Accueil</div>
     </md-list-item>
     <md-list-item class="md-1-line" ng-click="navbar.toggleDisplay($event)">
-      <div><md-icon md-font-set="material-icons">star_rate</md-icon></div>
-      <div flex offset="15">Binets</div>
+        <div><md-icon md-font-set="material-icons">star_rate</md-icon></div>
+        <div flex offset="15">Binets</div>
     </md-list-item>
-      <md-list flex offset="10" ng-show="navbar.showBinets">
+    <md-list flex offset="10" ng-show="navbar.showBinets">
         <md-list-item class="md-1-line"  ng-repeat="binet in navbar.binets" ng-click="navbar.navigateTo(binet.shortname,$event)">
-          <img width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.shortname}}" />
-          <p>{{binet.longname}}</p>
-          {{binet.balance}}€
+            <img width="24px" ng-src="{{binet.logo}}" class="md-avatar" alt="{{binet.shortname}}" />
+            <p>{{binet.longname}}</p>
+            {{binet.balance}}€
         </md-list-item>
-      </md-list>
+    </md-list>
     <md-list-item class="md-1-line" ng-click="navbar.navigateTo('settings',$event)">
-      <div><md-icon md-font-set="material-icons">settings</md-icon></div>
-      <div flex offset="15">Préférences</div>
+        <div><md-icon md-font-set="material-icons">settings</md-icon></div>
+        <div flex offset="15">Préférences</div>
     </md-list-item>
     <md-list-item class="md-1-line" ng-click="navbar.navigateTo('logout',$event)">
-      <div><md-icon md-font-set="material-icons">power_settings_new</md-icon></div>
-      <div flex offset="15">Déconnexion</div>
+        <div><md-icon md-font-set="material-icons">power_settings_new</md-icon></div>
+        <div flex offset="15">Déconnexion</div>
     </md-list-item>
-  </md-list>
-</md-content>
+</md-list>

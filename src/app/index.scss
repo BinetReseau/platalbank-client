@@ -9,16 +9,12 @@
 
 html {
   font-family: 'Roboto Slab', serif;
+  background-color: #FEEEEE;
+  background-attachment: fixed;
 }
 body {
-
   background-color: #FEEEEE;
-  background-image:url(../assets/images/conscrit.jpg);
-  background-size:cover;
-}
-
-[layout=row] {
-  flex-direction: row;
+  background-attachment: fixed;
 }
 
 @font-face {
