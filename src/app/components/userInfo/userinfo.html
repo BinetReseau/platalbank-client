@@ -1,7 +1,10 @@
-<div class="userInfo md-whiteframe-z2" layout="row">
-      <div class="photoContainer" flex="10">
-            <img class="profilePhoto" ng-src="{{info.user.photo}}" alt="{{info.user.shortname}}"/>
-      </div>
+
+<div class="userInfo md-whiteframe-z2" >
+      <div layout ="row" flex>
+        <div ng-click="info.navigateTo('UserProfile',$event)">
+              <img class="profilePhoto" ng-src="{{info.user.photo}}" alt="{{info.user.shortname}}"/>
+              </div>
+
 
       <div class="profileInfo" ng-click="info.navigateTo('UserProfile',$event)" flex="40">
             {{info.user.name}} {{info.user.surname}}
