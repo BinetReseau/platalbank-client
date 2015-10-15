@@ -1,5 +1,5 @@
 <section>
-  <md-subheader class="md-primary" ng-click="{{event-[ev.name]}}=!{{event-[ev.name]}}">{{ ev.name }}</md-subheader>
+  <md-subheader class="md-primary" style="cursor: pointer;" md-ink-ripple ng-click="{{event-[ev.name]}}=!{{event-[ev.name]}}">{{ ev.name }}</md-subheader>
   <md-list ng-attr-id="{{'event-' + ev.name}}" ng-show="ev.transactions.length == 1 ? !{{event-[ev.name]}} : {{event-[ev.name]}}">
     <div ng-repeat="t in ev.transactions">
       <md-divider />
