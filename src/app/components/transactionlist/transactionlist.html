@@ -1,10 +1,10 @@
 <md-content>
   <section ng-repeat="data in tl.transactions">
-    <md-subheader class="md-primary">{{ data.name }}</md-subheader>
-    <md-list layout-padding>
-      <div ng-repeat="t in data.transactions">
+    <md-subheader class="md-primary" ng-click="{{eventlist-[data.name]}}=!{{eventlist-[data.name]}}">{{ data.name }}</md-subheader>
+    <md-list ng-attr-id="{{'eventlist-' + data.name}}"layout-padding ng-show="!{{eventlist-[data.name]}}">
+      <div ng-repeat="t in data.event">
         <md-divider />
-        <transactionunit creator-pic="t.creatorPic" creator="t.creator" name="t.name" date="t.date" event-name="t.eventName" operations="t.operations" amount="t.amount" />
+        <eventunit name="t.name" transactions="t.transactions" />
       </div>
     </md-list>
   </section>
