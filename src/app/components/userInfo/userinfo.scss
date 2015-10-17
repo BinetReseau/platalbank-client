@@ -7,8 +7,25 @@
 
 }
 
-.profileInfo{
+
+.userInfo{
+  position: absolute;
+  bottom: 10px;
+  padding-top: 10px;
+  padding-left: 35px;
+  height: 80px;
+
   width: 30%;
   background-color: white
-  color: black;
+
+}
+
+
+.profileInfo{
+    position:relative;
+    padding-top : 10px;
+    padding-left : 20px;
+    left: 10px;
+    color: black;
+
 }
