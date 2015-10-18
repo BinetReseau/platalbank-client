@@ -1,14 +1,8 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('platalbankClient')
-    .run(runBlock);
-
-  /** @ngInject */
-  function runBlock($log) {
-
+angular
+.module('platalbankClient')
+.run(['$log',function($log) {
     $log.debug('runBlock end');
-  }
+}]);
 
-})();
