@@ -19,6 +19,15 @@
     margin-left: 27vw;
     margin-bottom: 2vh;
     margin-top: 15vh;
-    z-index: 3;
+    z-index: 2;
     position: relative;
+}
+
+.Addbutton{
+    z-index: 3;
+    position: absolute;
+    position: fixed;
+    left: 90vw;
+    top: 90vh;
+
 }
