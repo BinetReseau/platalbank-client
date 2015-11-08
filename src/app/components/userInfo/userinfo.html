@@ -7,18 +7,18 @@
 
 
               <div class="profileInfo">
-             {{info.user.name}} {{info.user.surname}}
+             {{info.user.shortname}}
          </div>
-            <div flex offset = "10">
+            <div flex offset = "15">
             
               <md-button class="md-raised" ng-class=" info.user.balance >0 ? 'md-primary' : 'md-warn' ">
 
               {{info.user.balance}} €
              </md-button>
-             <md-button class="md-primary">
+          <!-- <md-button class="md-primary">
              <small>{{info.user.preview}}€ </small>
            </md-button>
-
+         --> 
             </div>
           </div>
           </div>
