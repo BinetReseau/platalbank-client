@@ -1,3 +1,17 @@
 .md-verytall {
     height: 100%;
 }
+
+#profilePhoto {
+  max-width:60px;
+  height: auto;
+  border-radius: 30px;
+  //-webkit-border-radius: 35px;
+  //-moz-border-radius: 30px;
+}
+
+#userInfo{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}

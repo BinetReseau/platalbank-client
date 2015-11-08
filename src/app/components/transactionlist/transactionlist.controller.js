@@ -11,7 +11,10 @@
     this.transactions = [
       {
         name: "Aujourd'hui",
-        transactions: [
+        event:[
+          {
+            name:"mythe",
+            transactions: [
             {
               creatorPic: "PIC",
               creator: "Victor Quach",
@@ -28,11 +31,28 @@
               operations: { "Victor Quach": 1337, "Binet Subaïsse": -1337 },
               amount: 1337
             },
+            ]
+          },
+         {
+           name:"mythe2",
+           transactions: [
+           {
+              creatorPic: "PIC3",
+              creator: "BOB",
+              name: "pipo",
+              operations: { "YAO, Hua-Ting":9527, "Victor Quach":-9527},
+              amount: 9527
+           }
+           ]
+         },
         ]
       },
       {
         name: "Hier",
-        transactions: [
+        event:[
+          {
+          name:"snoopy",
+          transactions: [
             {
               creatorPic: "PIC",
               creator: "Victor Quach",
@@ -50,11 +70,16 @@
               operations: { "Victor Quach": 1337, "Binet Subaïsse": -1337 },
               amount: 1337
             },
+          ]
+          },
         ]
       },
       {
         name: "Avant",
-        transactions: [
+        event:[
+          {
+          name:"chocapix",
+          transactions: [
             {
               creatorPic: "PIC",
               creator: "Victor Quach",
@@ -79,8 +104,15 @@
               operations: { "Victor Quach": -1024, "Louis Vaneau": 1024 },
               amount: -1024
             }
+            ]
+          },
         ]
       }
     ];
+
+    _this.toggleDisplay = function(event)
+	{
+		_this.showTransactions = !_this.showTransactions;
+	}
   }
 })();
