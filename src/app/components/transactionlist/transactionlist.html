@@ -1,11 +1,5 @@
 <md-content>
-  <section ng-repeat="data in tl.transactions">
-    <md-subheader class="md-primary" style="cursor: pointer;" md-ink-ripple ng-click="{{eventlist-[data.name]}}=!{{eventlist-[data.name]}}">{{ data.name }}</md-subheader>
-    <md-list ng-attr-id="{{'eventlist-' + data.name}}"layout-padding ng-show="!{{eventlist-[data.name]}}">
-      <div ng-repeat="t in data.event">
-        <md-divider />
-        <eventunit name="t.name" transactions="t.transactions" />
-      </div>
-    </md-list>
-  </section>
+  <div ng-repeat="t in transactions">
+     {{t.label}}
+  </div>
 </md-content>
