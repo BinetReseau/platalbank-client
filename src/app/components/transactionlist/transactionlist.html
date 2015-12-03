@@ -1,5 +1,21 @@
 <md-content>
-  <div ng-repeat="t in transactions">
-     {{t.label}}
-  </div>
+  <section ng-repeat="event in events">
+    <md-subheader class="md-primary" style="cursor: pointer;" md-ink-ripple>{{ event }}</md-subheader>
+    <md-list layout-padding >
+      <div ng-repeat="transaction in transactions[$index]">
+        <md-list-item class="md-3-line" ng-click="">
+          <div flex>
+          </div>
+          <div fle="5">
+            <p>Créé à {{transaction.created}}</p>
+            <p>Modifié à {{transaction.last_modified}}</p>
+          </div>
+          <div flex="10">
+            <md-button class="md-raised" ng-class="transaction.amount >= 0 ? 'md-primary' : 'md-warn'">{{ transaction.amount }}</md-button>
+          </div>
+        </md-list-item>
+        <md-divider />
+      </div>
+    </md-list>
+  </section>
 </md-content>
