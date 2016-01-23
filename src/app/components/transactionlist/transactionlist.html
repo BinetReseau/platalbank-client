@@ -1,26 +1,26 @@
 <md-content>
-  <section ng-repeat="trs in groupBy">
-    <md-subheader class="md-primary" style="cursor: pointer;" md-ink-ripple>{{trs.date}}</md-subheader>
+  <section ng-repeat="trDate in groupBy">
+    <md-subheader class="md-primary" style="cursor: pointer;" md-ink-ripple>{{trDate.date}}</md-subheader>
     <md-list layout-padding >
-    <section ng-repeat="tr in trs.transactions">
-      <md-list-item class="md-3-line" ng-click="">
-        <div flex="5">
-          {{tr.last_modified_time}}
-        </div>
-        <div flex>
-          {{tr.event.label}}
-        </div>
-        <div flex>
-          {{tr.label}}
-        </div>
-        <div flex>
-          De user {{tr.debited_account.short_name}} à  user {{tr.credited_account.short_name}}
-        </div>
-        <div flex="10">
-          <md-button class="md-raised" ng-class="transaction.amount >= 0 ? 'md-primary' : 'md-warn'">{{ tr.amount }}</md-button>
-        </div>
-      </md-list-item>
+    <section ng-repeat="trEvent in trDate.transactions">
+      <md-subheader class="md-primary" style="cursor: pointer;" md-ink-ripple>{{trEvent.event.label}}</md-subheader>
+      <section ng-repeat="tr in trEvent.transactions">
+        <md-list-item class="md-3-line" ng-click="">
+          <div flex>
+            {{tr.last_modified_time}}
+          </div>
+          <div flex>
+            {{tr.label}}
+          </div>
+          <div flex>
+            De user {{tr.debited_account.short_name}} à  user {{tr.credited_account.short_name}}
+          </div>
+          <div flex="10">
+            <md-button class="md-raised" ng-class="transaction.amount >= 0 ? 'md-primary' : 'md-warn'">{{ tr.amount }}</md-button>
+          </div>
+        </md-list-item>
       <md-divider />
+      </section>
     </section>
     </md-list>
   </section>
