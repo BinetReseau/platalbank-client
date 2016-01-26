@@ -1,15 +1,9 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('platalbankClient')
-    .controller('HeaderController', HeaderController);
+angular
+.module('platalbankClient')
+.controller('HeaderController', ['$scope',function($scope){
+    $scope.photo = "../assets/images/photo.jpeg";
+    $scope.balance = 1337;
+}]);
 
-  /** @ngInject */
-  function HeaderController() {
-    var _this = this;
-    _this.photo = "../assets/images/photo.jpeg";
-    _this.balance = 1337;
-  }
-
-})();

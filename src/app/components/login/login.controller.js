@@ -1,12 +1,6 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('platalbankClient')
-    .controller('LoginController', LoginController);
+angular
+.module('platalbankClient')
+.controller('LoginController', [function(){}]);
 
-  /** @ngInject */
-  function LoginController() {
-    var _this = this;
-  }
-})();
