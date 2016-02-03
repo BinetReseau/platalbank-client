@@ -1,12 +1,5 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('platalbankClient')
-    .controller('TransactionunitController', TransactionunitController);
-
-  /** @ngInject */
-  function TransactionunitController() {
-    var _this = this;
-  }
-})();
+angular
+.module('platalbankClient')
+.controller('TransactionunitController', ['$scope',function($scope){}]);

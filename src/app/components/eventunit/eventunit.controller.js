@@ -1,12 +1,7 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('platalbankClient')
-    .controller('EventunitController', EventunitController);
+angular
+.module('platalbankClient')
+.controller('EventunitController', ['$scope',function($scope){
 
-  /** @ngInject */
-  function EventunitController() {
-    var _this = this;
-  }
-})();
+}]);

@@ -1,9 +1,7 @@
 /* global malarkey:false, toastr:false, moment:false */
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('platalbankClient')
-    .constant('moment', moment);
+angular
+.module('platalbankClient')
+.constant('moment', moment);
 
-})();

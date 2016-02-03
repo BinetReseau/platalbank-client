@@ -1,13 +1,8 @@
-(function() {
-  'use strict';
+'use strict';
 
-  angular
-    .module('platalbankClient')
-    .config(routeConfig);
-
-  /** @ngInject */
-  function routeConfig($stateProvider, $urlRouterProvider) {
+angular
+.module('platalbankClient')
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/login');
-  }
+}]);
 
-})();
